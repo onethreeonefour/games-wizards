@@ -9,8 +9,7 @@ cd dist
 git init 
 git add -A
 git commit -m 'New deployment'
-git push -f git@
 
-git push -f git@github.com:onethreeonefour/games-wizards.git main:gh-pages
+git push -f git@github.com:onethreeonefour/games-wizards.io main:gh-pages
 
 cd -
