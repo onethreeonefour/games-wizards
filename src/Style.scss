@@ -1,0 +1,445 @@
+$red: red;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans Condensed", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+* {
+  scrollbar-color: rgb(182, 182, 182) transparent;
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f5f5f500;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f500;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  background-color: rgb(182, 182, 182);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-display: swap;
+}
+
+body {
+  background-color: rgb(7, 7, 7);
+}
+
+.loading-text {
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+
+  div {
+    width: 1rem;
+    height: 1rem;
+    margin: 2rem 0.3rem;
+    background: rgb(133, 133, 133);
+    border-radius: 50%;
+    animation: 0.9s bounce infinite alternate;
+
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+  }
+}
+
+@keyframes bounce {
+  to {
+    opacity: 0.3;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+.underline-heading {
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+.metacritic {
+  padding: 0.5rem;
+  color: white;
+  background-color: green;
+}
+.underline-heading:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 4px solid rgb(221, 58, 58);
+}
+.button {
+  background-color: rgb(251, 255, 255);
+  width: auto;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 200px;
+  transition: 0.2s all ease-in-out;
+}
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+//HERO
+.hero-container {
+  color: white;
+  align-items: center;
+  display: flex;
+  height: 85vh;
+  background-color: rgb(0, 0, 0);
+  background-position: top center;
+  background-size: 100%, cover;
+  .cta-container {
+    text-shadow: 2px 2px 1px black;
+    padding: 2rem;
+    h1 {
+      font-size: 3rem;
+    }
+    form {
+      margin-top: 2rem;
+    }
+    label {
+      display: block;
+    }
+    input {
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      margin-top: 10px;
+      color: black;
+    }
+    button {
+      cursor: pointer;
+      margin-left: 0.5rem;
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      background-color: white;
+      color: black;
+      border: 3px solid white;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      border-color: black;
+    }
+  }
+  .hero-details {
+    text-shadow: 2px 2px 1px black;
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    padding: 2rem;
+    text-align: right;
+    span {
+      background-color: #222222;
+      padding: 0.5rem;
+      margin: 5px 5px 5px 5px;
+      display: inline-block;
+    }
+  }
+}
+
+.landing-container {
+  padding-top: 3rem;
+  width: 90%;
+  margin: auto;
+}
+//Landing Popular Releases
+.landing-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+//Hero End
+.game-card {
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+
+  div {
+    padding: 2rem;
+    background-color: rgb(22, 22, 22);
+    position: relative;
+    height: 90px;
+    place-content: center;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      padding: 0.5rem 0 0.5rem 0;
+    }
+    h5 {
+      color: rgb(172, 172, 172);
+    }
+    img {
+      height: 20px;
+      width: auto;
+      filter: invert(1);
+    }
+  }
+  .platform-span {
+    display: inline;
+    padding: 0 10px 0 0;
+    flex-direction: row;
+    img {
+      display: inline-block;
+      width: 20px;
+      height: auto;
+    }
+  }
+  .metacritic {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    text-align: right;
+    font-size: large;
+    padding: 0.3rem;
+    color: white;
+  }
+  img {
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+  }
+  a {
+    color: black;
+  }
+}
+.game-card:hover {
+  border-color: turquoise;
+}
+//Advert
+.rawg-container {
+  width: 90%;
+  margin: auto;
+  padding: 3rem 0 3rem 0;
+}
+.rawg-flex-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  gap: 1rem;
+  margin: 3rem auto;
+}
+.rawg-card {
+  color: white;
+  background-color: #1b1b1b;
+  padding: 3rem;
+  border-radius: 7.5px;
+  height: 300px;
+  place-content: center;
+  display: grid;
+  h1 {
+    padding-bottom: 1rem;
+  }
+  a {
+    margin: 1rem auto auto auto;
+    border-radius: 5px;
+  }
+}
+//Game-Details-Page
+
+.game-container {
+  color: white;
+  align-items: center;
+  display: flex;
+  height: 85vh;
+  background-color: rgb(0, 0, 0);
+  background-position: top center;
+  background-size: 100%, cover;
+  .game-sub-details {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2.75rem;
+    margin-left: 2rem;
+    h1 {
+      font-size: 3rem;
+    }
+    div {
+      margin-top: 2rem;
+      span {
+        background-color: white;
+        padding: 0.5rem;
+        margin: 1rem 0.5rem 0.5rem 0;
+        display: inline-block;
+        color: black;
+      }
+      h4 {
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .game-rating {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.game-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  width: 80%;
+  margin: auto;
+  padding: 4rem;
+  gap: 2rem;
+  .game-details-info {
+    place-content: center;
+  }
+  h4 {
+    padding: 1rem 0 1rem 0;
+  }
+  .game-details-flex {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .game-description {
+    margin-top: 2rem;
+    width: 100%;
+    p {
+      padding: 0 0 1rem 0;
+    }
+    h3 {
+      padding-bottom: 1rem;
+    }
+  }
+}
+.chip {
+  display: inline-flex;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0.25rem 0.5rem 0.5rem 0;
+  text-align: center;
+}
+.video-container {
+  height: auto;
+  margin: 2rem 0 1rem 0;
+  video {
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+  }
+}
+.screenshots-container {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  img {
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+  }
+}
+//suggested games container
+.suggested-games {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+.suggested-grid-container {
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: grid;
+  gap: 1rem;
+}
+
+//Search results page
+
+.search-results-container {
+  margin: 150px auto;
+  width: 80%;
+}
+@media only screen and (min-width: 3840px) {
+  .game-details,
+  .rawg-container,
+  .suggested-games,
+  .landing-container {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .game-details,
+  .rawg-container,
+  .suggested-games,
+  .landing-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .game-details {
+    grid-template-columns: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero-container {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .cta-container {
+      input {
+        width: 95%;
+      }
+      button {
+        margin-top: 1rem;
+      }
+    }
+    .hero-details {
+      bottom: 0;
+    }
+  }
+  .game-container {
+    height: 100vh;
+    .game-sub-details {
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .game-details {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+    margin: auto;
+  }
+  .landing-grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .screenshots-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .suggested-grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
