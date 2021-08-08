@@ -8,6 +8,8 @@ jobs:
     - uses: actions/checkout@v2
     - id: Build-Vue
       uses: xRealNeon/VuePagesAction@1.0.0
+      env:
+            VUE_APP_API_KEY: 6bbf65e5950f497b8b6066ba048ab15a
       with:
         username: 'onethreeonefour'
         reponame: 'games-wizards'
